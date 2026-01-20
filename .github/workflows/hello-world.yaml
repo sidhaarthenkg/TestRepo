@@ -1,5 +1,9 @@
 name: hello-world
-on: push
+on:
+  push:
+  schedule:
+    - cron: '*/5 * * * *'  # every 5 minutes
+
 jobs:
   my-job:
     runs-on: ubuntu-latest
